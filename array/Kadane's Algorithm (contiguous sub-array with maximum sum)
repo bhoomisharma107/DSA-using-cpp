@@ -1,0 +1,16 @@
+/Given an array arr of N integers. Find the contiguous sub-array with maximum sum.
+
+
+int maxSubarraySum(int a[], int n){
+       int  temp=0; int Max=0;
+       
+        for (int i=0; i < n; i++ ) {
+            temp = temp + a[i];
+            if (Max < temp)
+            Max = temp;
+            
+            if (temp<0)
+            temp=0;
+        };
+        return Max;
+    }
